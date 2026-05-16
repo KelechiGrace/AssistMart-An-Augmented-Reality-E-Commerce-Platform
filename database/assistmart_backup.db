@@ -1,0 +1,16 @@
+-- Run this in SQLite (DB Browser or CLI)
+CREATE TABLE IF NOT EXISTS products (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  price REAL,
+  image TEXT,
+  description TEXT,
+  category TEXT,
+  arSupported INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS ar_stats (
+  product_id INTEGER PRIMARY KEY,
+  try_on_count INTEGER DEFAULT 0,
+  added_to_cart_after_ar INTEGER DEFAULT 0
+);
